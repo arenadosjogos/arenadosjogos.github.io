@@ -1,0 +1,22 @@
+# Arquivos do sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Configurações locais de editor e ferramentas
+.vscode/
+.idea/
+.claude/
+*.code-workspace
+
+# Credenciais e variáveis de ambiente (nunca publicar)
+.env
+.env.*
+*.pem
+*.key
+
+# Temporários e logs
+*.log
+*.tmp
+*.bak
+node_modules/

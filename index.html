@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Os 10 jogos mais jogados do mundo, com números, curiosidades e ficha de cada game.">
+  <title>Arena dos Jogos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Ranking 2026 · os mais jogados do planeta</div>
+      <h1>Arena dos <span>Jogos</span></h1>
+      <p>Os games que reúnem milhões de pessoas todos os dias. Veja os números, descubra o estilo de cada um e escolha sua próxima partida.</p>
+    </div>
+    <div class="hud" aria-label="Destaques">
+      <div><b>43,5 mi</b><small>recorde de pessoas online ao mesmo tempo na Steam (2026)</small></div>
+      <div><b>350 mi+</b><small>cópias vendidas de Minecraft, o jogo mais vendido da história</small></div>
+      <div><b>10</b><small>jogos no ranking desta página</small></div>
+    </div>
+  </header>
+
+  <nav class="bar" aria-label="Filtros">
+    <div class="chips" id="chips"></div>
+    <label>Ordenar: <select id="sort">
+      <option value="rank">Popularidade</option>
+      <option value="year">Lançamento (mais novo)</option>
+      <option value="name">Nome (A–Z)</option>
+    </select></label>
+  </nav>
+
+  <section class="grid" id="grid" aria-label="Jogos"></section>
+
+  <section class="chart">
+    <div class="eyebrow">Picos históricos na Steam</div>
+    <h2>Quantas pessoas jogaram ao mesmo tempo?</h2>
+    <p>Recorde de jogadores simultâneos de cada jogo na Steam, a maior loja de jogos de PC. É a mesma medida para todos, então dá para comparar direto.</p>
+    <div class="rows" id="rows"></div>
+  </section>
+
+  <footer>
+    Números aproximados, com base nos dados públicos mais recentes divulgados pelas empresas e por sites de acompanhamento (SteamDB, relatórios trimestrais). Cada jogo mede de um jeito (jogadores por mês, por dia, contas ou cópias vendidas), por isso o tipo de número aparece em cada cartão. As artes são ilustrações originais desta página.
+  </footer>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="sheet"></div>
+</div>
+
+<!-- Primeiro os dados, depois a lógica que usa eles -->
+<script src="js/dados.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
