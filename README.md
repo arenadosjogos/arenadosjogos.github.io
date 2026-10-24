@@ -11,7 +11,7 @@ arena-dos-jogos/
 │   └── style.css   → aparência: cores, fontes, tamanhos
 └── js/
     ├── dados.js    → informações dos jogos (edite aqui para mudar textos e números)
-    └── script.js   → comportamento: cartões, filtros, ficha e gráfico
+    └── script.js   → comportamento: cenas em pixel art, cartões, filtros, ficha e gráfico
 ```
 
 ## Como rodar
@@ -22,4 +22,4 @@ arena-dos-jogos/
 
 ## Como publicar
 
-Arraste a pasta inteira em https://app.netlify.com/drop (aba Deploys para atualizar).
+O site fica em https://arenadosjogos.github.io (GitHub Pages). Cada `git push` na branch `main` atualiza o site em cerca de 1 minuto.

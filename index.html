@@ -8,23 +8,36 @@
   <meta name="description" content="Os 10 jogos mais jogados do mundo, com números, curiosidades e ficha de cada game.">
   <title>Arena dos Jogos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Barlow:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
-    <div>
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-text">
       <div class="eyebrow">Ranking 2026 · os mais jogados do planeta</div>
       <h1>Arena dos <span>Jogos</span></h1>
       <p>Os games que reúnem milhões de pessoas todos os dias. Veja os números, descubra o estilo de cada um e escolha sua próxima partida.</p>
+      <a class="start" href="#grid"><span class="caret">▶</span> Press Start</a>
     </div>
     <div class="hud" aria-label="Destaques">
-      <div><b>43,5 mi</b><small>recorde de pessoas online ao mesmo tempo na Steam (2026)</small></div>
-      <div><b>350 mi+</b><small>cópias vendidas de Minecraft, o jogo mais vendido da história</small></div>
-      <div><b>10</b><small>jogos no ranking desta página</small></div>
+      <div><b data-to="43.5" data-dec="1" data-suf=" mi">43,5 mi</b><small>recorde de pessoas online ao mesmo tempo na Steam (2026)</small></div>
+      <div><b data-to="350" data-suf=" mi+">350 mi+</b><small>cópias vendidas de Minecraft, o jogo mais vendido da história</small></div>
+      <div><b data-to="10">10</b><small>jogos no ranking desta página</small></div>
     </div>
   </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker">
+      <span>★ Fortnite: 650 mi+ contas registradas</span>
+      <span>★ PUBG: 3,2 mi jogando ao mesmo tempo, o recorde da Steam</span>
+      <span>★ Roblox: 150 mi+ jogadores por dia</span>
+      <span>★ Free Fire: o battle royale que virou febre no Brasil</span>
+      <span>★ GTA V: 215 mi+ cópias vendidas</span>
+      <span>★ League of Legends: mais de 160 campeões</span>
+    </div>
+  </div>
 
   <nav class="bar" aria-label="Filtros">
     <div class="chips" id="chips"></div>
@@ -45,7 +58,7 @@
   </section>
 
   <footer>
-    Números aproximados, com base nos dados públicos mais recentes divulgados pelas empresas e por sites de acompanhamento (SteamDB, relatórios trimestrais). Cada jogo mede de um jeito (jogadores por mês, por dia, contas ou cópias vendidas), por isso o tipo de número aparece em cada cartão. As artes são ilustrações originais desta página.
+    Números aproximados, com base nos dados públicos mais recentes divulgados pelas empresas e por sites de acompanhamento (SteamDB, relatórios trimestrais). Cada jogo mede de um jeito (jogadores por mês, por dia, contas ou cópias vendidas), por isso o tipo de número aparece em cada cartão. As cenas em pixel art são ilustrações originais desta página, inspiradas no estilo de cada jogo; nomes e marcas pertencem às respectivas empresas.
   </footer>
 </div>
 
