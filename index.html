@@ -5,70 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Os 10 jogos mais jogados do mundo, com números, curiosidades e ficha de cada game.">
+  <meta name="description" content="Os 10 jogos mais jogados do mundo, com números, curiosidades, ficha de cada game e mini-jogos para testar sua mira.">
   <title>Arena dos Jogos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600&family=VT323&display=swap">
   <!-- ?v=N: aumente a cada atualização para o navegador baixar a versão nova -->
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
-<div class="wrap">
-  <header class="hero">
-    <div class="sun" aria-hidden="true"></div>
-    <div class="hero-text">
-      <div class="eyebrow">Ranking 2026 · os mais jogados do planeta</div>
-      <h1>Arena dos <span>Jogos</span></h1>
-      <p>Os games que reúnem milhões de pessoas todos os dias. Veja os números, descubra o estilo de cada um e escolha sua próxima partida.</p>
-      <a class="start" href="#grid"><span class="caret">▶</span> Press Start</a>
-    </div>
-    <div class="hud" aria-label="Destaques">
-      <div><b data-to="43.5" data-dec="1" data-suf=" mi">43,5 mi</b><small>recorde de pessoas online ao mesmo tempo na Steam (2026)</small></div>
-      <div><b data-to="350" data-suf=" mi+">350 mi+</b><small>cópias vendidas de Minecraft, o jogo mais vendido da história</small></div>
-      <div><b data-to="10">10</b><small>jogos no ranking desta página</small></div>
-    </div>
-  </header>
+<div class="app">
+  <aside class="side">
+    <a class="logo" href="#topo" aria-label="Arena dos Jogos"><span class="logo-word" id="logoWord" aria-hidden="true">Arena dos Jogos</span><span class="chomper" aria-hidden="true"></span></a>
+    <div class="side-title">Categorias</div>
+    <nav class="cats" id="chips" aria-label="Categorias"></nav>
+    <a class="side-cta" href="#arena"><span aria-hidden="true">🎯</span><span>Arena de Tiro<small>Teste sua mira em 30 segundos</small></span></a>
+  </aside>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track" id="ticker">
-      <span>★ Fortnite: 650 mi+ contas registradas</span>
-      <span>★ PUBG: 3,2 mi jogando ao mesmo tempo, o recorde da Steam</span>
-      <span>★ Roblox: 150 mi+ jogadores por dia</span>
-      <span>★ Free Fire: o battle royale que virou febre no Brasil</span>
-      <span>★ GTA V: 215 mi+ cópias vendidas</span>
-      <span>★ League of Legends: mais de 160 campeões</span>
+  <main class="main" id="topo">
+    <h1 class="sr-only">Arena dos Jogos: os jogos mais jogados do mundo</h1>
+
+    <section class="banner" id="banner" aria-label="Top 5 mais jogados"></section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker">
+        <span>★ Fortnite: 650 mi+ contas registradas</span>
+        <span>★ PUBG: 3,2 mi jogando ao mesmo tempo, o recorde da Steam</span>
+        <span>★ Roblox: 150 mi+ jogadores por dia</span>
+        <span>★ Free Fire: o battle royale que virou febre no Brasil</span>
+        <span>★ GTA V: 215 mi+ cópias vendidas</span>
+        <span>★ League of Legends: mais de 160 campeões</span>
+      </div>
+    </div>
+
+    <section class="block" id="jogos">
+      <header class="block-head">
+        <h2><span id="gridIco" aria-hidden="true">🔥</span> <span id="gridTitle">Outros em alta</span></h2>
+        <span class="block-sub" id="gridSub"></span>
+      </header>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="block arena" id="arena">
+      <header class="block-head">
+        <h2><span aria-hidden="true">🎯</span> Arena de Tiro</h2>
+        <span class="block-sub">Os bonequinhos saem de trás das barreiras: clique para acertar</span>
+      </header>
+      <div class="mg" id="arenaGame"></div>
+    </section>
+
+    <section class="chart">
+      <div class="kicker">Picos históricos na Steam</div>
+      <h2>Quantas pessoas jogaram ao mesmo tempo?</h2>
+      <p>Recorde de jogadores simultâneos de cada jogo na Steam, a maior loja de jogos de PC. É a mesma medida para todos, então dá para comparar direto.</p>
+      <div class="rows" id="rows"></div>
+    </section>
+  </main>
+</div>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <div class="foot-about">
+      <b class="foot-brand">Arena dos Jogos</b>
+      <p>Números aproximados, com base em dados públicos das empresas e de sites de acompanhamento (SteamDB, relatórios trimestrais). Cada jogo mede de um jeito, por isso o tipo de número aparece em cada cartão. Nomes e marcas pertencem às respectivas empresas.</p>
+    </div>
+    <div class="foot-credits">
+      <b>Imagens</b>
+      <ul class="credits" id="credits"></ul>
+    </div>
+    <div class="foot-legal">
+      <b>Avisos legais</b>
+      <p>Site de fãs, gratuito e sem fins lucrativos. Não é oficial e não tem ligação com nenhuma das empresas citadas.</p>
+      <p>Arena dos Jogos was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+      <p>NÃO É UM PRODUTO OFICIAL DO MINECRAFT. NÃO APROVADO NEM ASSOCIADO À MOJANG OU À MICROSOFT.</p>
+      <p>Fortnite é marca registrada da Epic Games; este site não é patrocinado nem endossado pela Epic Games. Grand Theft Auto V © Rockstar Games / Take-Two Interactive.</p>
     </div>
   </div>
-
-  <nav class="bar" aria-label="Filtros">
-    <div class="chips" id="chips"></div>
-    <label>Ordenar: <select id="sort">
-      <option value="rank">Popularidade</option>
-      <option value="year">Lançamento (mais novo)</option>
-      <option value="name">Nome (A–Z)</option>
-    </select></label>
-  </nav>
-
-  <section class="grid" id="grid" aria-label="Jogos"></section>
-
-  <section class="chart">
-    <div class="eyebrow">Picos históricos na Steam</div>
-    <h2>Quantas pessoas jogaram ao mesmo tempo?</h2>
-    <p>Recorde de jogadores simultâneos de cada jogo na Steam, a maior loja de jogos de PC. É a mesma medida para todos, então dá para comparar direto.</p>
-    <div class="rows" id="rows"></div>
-  </section>
-
-  <footer>
-    Números aproximados, com base nos dados públicos mais recentes divulgados pelas empresas e por sites de acompanhamento (SteamDB, relatórios trimestrais). Cada jogo mede de um jeito (jogadores por mês, por dia, contas ou cópias vendidas), por isso o tipo de número aparece em cada cartão. As cenas em pixel art são ilustrações originais desta página, inspiradas no estilo de cada jogo; nomes e marcas pertencem às respectivas empresas.
-  </footer>
-</div>
+</footer>
 
 <div class="overlay" id="overlay" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="sheet"></div>
 </div>
 
-<!-- Primeiro os dados, depois a lógica que usa eles -->
-<script src="js/dados.js?v=2"></script>
-<script src="js/script.js?v=2"></script>
+<!-- Primeiro os dados, depois os mini-jogos, por último a lógica da página -->
+<script src="js/dados.js?v=6"></script>
+<script src="js/minigames.js?v=6"></script>
+<script src="js/script.js?v=6"></script>
 </body>
 </html>
